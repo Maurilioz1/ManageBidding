@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Tests", "0 - Tests", "{4F2986DC-24CA-458C-BFBE-334FE31AA678}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Web", "1 - Web", "{26728D15-B1EF-42BC-90C1-CB8C9DB33797}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{31DFE37C-9FA6-4FF3-897F-4B98AEC77780}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{CCD3D07E-104B-42E7-9F48-94DF6BFDD3B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{2053F3F3-9568-4447-B4E7-1565CAEAFFA1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Core", "5 - Core", "{FA72AB60-FCF9-4D1B-8589-423A240F003E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{5AFDBE53-E733-47E6-82E4-A34538CEC9EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{911AA30C-25FC-4363-9E8E-02ADD04FC77B}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5AFDBE53-E733-47E6-82E4-A34538CEC9EE} = {2053F3F3-9568-4447-B4E7-1565CAEAFFA1}
+		{911AA30C-25FC-4363-9E8E-02ADD04FC77B} = {2053F3F3-9568-4447-B4E7-1565CAEAFFA1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {171771D8-5218-404C-9674-2749D9686DA6}
+	EndGlobalSection
+EndGlobal
