@@ -19,13 +19,26 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{911AA30C-25FC-4363-9E8E-02ADD04FC77B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageBidding.Core", "src\ManageBidding.Core\ManageBidding.Core.csproj", "{93C53283-6D3F-4AF9-A69B-5C8992896A97}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93C53283-6D3F-4AF9-A69B-5C8992896A97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93C53283-6D3F-4AF9-A69B-5C8992896A97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93C53283-6D3F-4AF9-A69B-5C8992896A97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93C53283-6D3F-4AF9-A69B-5C8992896A97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5AFDBE53-E733-47E6-82E4-A34538CEC9EE} = {2053F3F3-9568-4447-B4E7-1565CAEAFFA1}
 		{911AA30C-25FC-4363-9E8E-02ADD04FC77B} = {2053F3F3-9568-4447-B4E7-1565CAEAFFA1}
+		{93C53283-6D3F-4AF9-A69B-5C8992896A97} = {FA72AB60-FCF9-4D1B-8589-423A240F003E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {171771D8-5218-404C-9674-2749D9686DA6}
