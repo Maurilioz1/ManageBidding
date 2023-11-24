@@ -1,5 +1,5 @@
-﻿using ManageBidding.Core.Data.Interfaces;
-using ManageBidding.Domain.Models;
+﻿using ManageBidding.Domain.Models;
+using ManageBidding.Core.Data.Interfaces;
 
 namespace ManageBidding.Domain.Interfaces
 {
