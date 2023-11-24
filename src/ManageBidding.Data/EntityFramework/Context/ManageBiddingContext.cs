@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ManageBidding.Domain.Models;
 using ManageBidding.Core.Data.Interfaces;
-using ManageBidding.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ManageBidding.Data.EntityFramework.Context
 {
