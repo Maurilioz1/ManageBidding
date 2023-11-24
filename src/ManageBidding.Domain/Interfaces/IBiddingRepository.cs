@@ -6,7 +6,7 @@ namespace ManageBidding.Domain.Interfaces
     public interface IBiddingRepository : IRepository<Bidding>
     {
         Task<IEnumerable<Bidding>> Get();
-        Task<Bidding> GetById();
+        Task<Bidding> GetById(Guid id);
         void Create(Bidding bidding);
         void Update(Bidding bidding);
     }
