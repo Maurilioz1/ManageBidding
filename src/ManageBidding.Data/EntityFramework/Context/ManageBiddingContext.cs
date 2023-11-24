@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ManageBidding.Core.Data.Interfaces;
+using ManageBidding.Domain.Models;
 
 namespace ManageBidding.Data.EntityFramework.Context
 {
@@ -10,7 +11,7 @@ namespace ManageBidding.Data.EntityFramework.Context
 
         }
 
-        // --TODO-- Add DbSet Model
+        public DbSet<Bidding>? Biddings { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
