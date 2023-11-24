@@ -1,5 +1,5 @@
-﻿using ManageBidding.Core.DomainObjects.Interfaces;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
+using ManageBidding.Core.DomainObjects.Interfaces;
 
 namespace ManageBidding.Core.Data.Interfaces
 {
