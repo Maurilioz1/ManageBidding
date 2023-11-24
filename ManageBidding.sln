@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageBidding.Data", "src\M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageBidding.Domain", "src\ManageBidding.Domain\ManageBidding.Domain.csproj", "{ECA358A3-ECEB-48F2-98C5-D1F71F12E365}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageBidding.MVC", "src\ManageBidding.MVC\ManageBidding.MVC.csproj", "{ADC810B2-E6C9-4B20-98BF-328CFB7A214B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{ECA358A3-ECEB-48F2-98C5-D1F71F12E365}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECA358A3-ECEB-48F2-98C5-D1F71F12E365}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECA358A3-ECEB-48F2-98C5-D1F71F12E365}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADC810B2-E6C9-4B20-98BF-328CFB7A214B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADC810B2-E6C9-4B20-98BF-328CFB7A214B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADC810B2-E6C9-4B20-98BF-328CFB7A214B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADC810B2-E6C9-4B20-98BF-328CFB7A214B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{93C53283-6D3F-4AF9-A69B-5C8992896A97} = {FA72AB60-FCF9-4D1B-8589-423A240F003E}
 		{902331FE-4F4E-4FDF-B5A9-5B91C2955E36} = {5AFDBE53-E733-47E6-82E4-A34538CEC9EE}
 		{ECA358A3-ECEB-48F2-98C5-D1F71F12E365} = {CCD3D07E-104B-42E7-9F48-94DF6BFDD3B8}
+		{ADC810B2-E6C9-4B20-98BF-328CFB7A214B} = {26728D15-B1EF-42BC-90C1-CB8C9DB33797}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {171771D8-5218-404C-9674-2749D9686DA6}

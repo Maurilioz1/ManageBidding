@@ -30,6 +30,7 @@ namespace ManageBidding.Data.EntityFramework.Context
                 if (entry.State == EntityState.Added)
                 {
                     entry.Property("RegistrationDate").CurrentValue = DateTime.Now;
+                    entry.Property("Active").CurrentValue = true;
                 }
 
                 if (entry.State == EntityState.Modified)

@@ -4,6 +4,7 @@
     {
         public Guid Id { get; set; }
         public DateTime RegistrationDate { get; set; }
+        public bool Active { get; set; }
 
         public Entity()
         {

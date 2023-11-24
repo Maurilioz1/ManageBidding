@@ -12,7 +12,7 @@ namespace ManageBidding.Domain.Models
 
         public Bidding()
         {
-            
+
         }
 
         public Bidding(string number, string description, EStatus status)
@@ -20,6 +20,16 @@ namespace ManageBidding.Domain.Models
             Number = number;
             Description = description;
             Status = status;
+        }
+
+        public void Activate()
+        {
+            Active = true;
+        }
+
+        public void Deactivate()
+        {
+            Active = false;
         }
     }
 }
