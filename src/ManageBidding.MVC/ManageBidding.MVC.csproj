@@ -13,4 +13,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ManageBidding.Application\ManageBidding.Application.csproj" />
+  </ItemGroup>
+
 </Project>
