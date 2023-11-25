@@ -46,17 +46,94 @@ namespace ManageBidding.MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(BiddingViewModel biddingViewModel)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(biddingViewModel);
             }
 
             await _biddingService.Create(biddingViewModel);
 
-            if(!ValidOperation())
+            if (!ValidOperation())
             {
                 return View(biddingViewModel);
             }
+
+            return RedirectToAction("Index");
+        }
+
+        [Route("editar")]
+        public async Task<IActionResult> Update(Guid id)
+        {
+            var bidding = await GetBidding(id);
+
+            if (bidding == null)
+            {
+                return NotFound();
+            }
+
+            return View(bidding);
+        }
+
+        [Route("editar")]
+        [HttpPut]
+        public async Task<IActionResult> Update(BiddingViewModel biddingViewModel, Guid id)
+        {
+            if (id != biddingViewModel.Id)
+            {
+                return NotFound();
+            }
+
+            var bidding = await GetBidding(id);
+
+            biddingViewModel.Number = bidding.Number;
+
+            if (!ModelState.IsValid)
+            {
+                return View(biddingViewModel);
+            }
+
+            await _biddingService.Update(biddingViewModel);
+
+            if (!ValidOperation())
+            {
+                return View(biddingViewModel);
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        [Route("deletar")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var bidding = await GetBidding(id);
+
+            if (bidding == null)
+            {
+                return NotFound();
+            }
+
+            return View(bidding);
+        }
+
+        [Route("deletar")]
+        [HttpDelete, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(Guid id)
+        {
+            var bidding = await GetBidding(id);
+
+            if (bidding == null)
+            {
+                return BadRequest();
+            }
+
+            await _biddingService.Delete(id);
+
+            if (!ValidOperation())
+            {
+                return View(bidding);
+            }
+
+            TempData["Succes"] = "Licitação deletada com sucesso!";
 
             return RedirectToAction("Index");
         }
