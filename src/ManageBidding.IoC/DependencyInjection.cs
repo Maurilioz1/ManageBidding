@@ -15,6 +15,7 @@ namespace ManageBidding.IoC
 
             #region Services
             services.AddScoped<INotificationService, NotificationService>();
+            services.AddScoped<IBiddingService, BiddingService>();
             #endregion
 
             #region Repositories
