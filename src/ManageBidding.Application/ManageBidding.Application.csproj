@@ -7,7 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ManageBidding.Core\ManageBidding.Core.csproj" />
+    <ProjectReference Include="..\ManageBidding.Domain\ManageBidding.Domain.csproj" />
   </ItemGroup>
 
 </Project>
