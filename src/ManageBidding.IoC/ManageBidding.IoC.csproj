@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ManageBidding.Application\ManageBidding.Application.csproj" />
     <ProjectReference Include="..\ManageBidding.Data\ManageBidding.Data.csproj" />
   </ItemGroup>
 

@@ -1,9 +1,9 @@
 ﻿using FluentValidation;
 using FluentValidation.Results;
+using ManageBidding.Application.Interfaces.Services;
 using ManageBidding.Core.DomainObjects.Models;
-using ManageBidding.Core.DomainObjects.Interfaces.Services;
 
-namespace ManageBidding.Core.DomainObjects.Services
+namespace ManageBidding.Application.Services
 {
     public abstract class Service
     {
@@ -31,7 +31,7 @@ namespace ManageBidding.Core.DomainObjects.Services
         {
             var validator = validation.Validate(entity);
 
-            if(validator.IsValid)
+            if (validator.IsValid)
             {
                 return true;
             }

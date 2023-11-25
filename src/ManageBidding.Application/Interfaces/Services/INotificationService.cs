@@ -1,6 +1,6 @@
 ﻿using ManageBidding.Core.DomainObjects.Models;
 
-namespace ManageBidding.Core.DomainObjects.Interfaces.Services
+namespace ManageBidding.Application.Interfaces.Services
 {
     public interface INotificationService
     {

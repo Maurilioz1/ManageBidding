@@ -1,9 +1,9 @@
-﻿using ManageBidding.Core.DomainObjects.Interfaces.Services;
-using ManageBidding.Core.DomainObjects.Services;
-using ManageBidding.Data.EntityFramework.Context;
-using ManageBidding.Data.EntityFramework.Repositories;
+﻿using Microsoft.Extensions.DependencyInjection;
 using ManageBidding.Domain.Interfaces;
-using Microsoft.Extensions.DependencyInjection;
+using ManageBidding.Application.Services;
+using ManageBidding.Data.EntityFramework.Context;
+using ManageBidding.Application.Interfaces.Services;
+using ManageBidding.Data.EntityFramework.Repositories;
 
 namespace ManageBidding.IoC
 {

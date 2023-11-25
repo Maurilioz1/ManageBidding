@@ -1,7 +1,7 @@
-﻿using ManageBidding.Core.DomainObjects.Models;
-using ManageBidding.Core.DomainObjects.Interfaces.Services;
+﻿using ManageBidding.Application.Interfaces.Services;
+using ManageBidding.Core.DomainObjects.Models;
 
-namespace ManageBidding.Core.DomainObjects.Services
+namespace ManageBidding.Application.Services
 {
     public class NotificationService : INotificationService
     {
