@@ -6,7 +6,7 @@ namespace ManageBidding.Domain.Models
 {
     public class Bidding : Entity, IAggregateRoot
     {
-        public string? Number { get; set; }
+        public int Number { get; set; }
         public string? Description { get; set; }
         public EStatus Status { get; set; }
 
@@ -15,7 +15,7 @@ namespace ManageBidding.Domain.Models
 
         }
 
-        public Bidding(string number, string description, EStatus status)
+        public Bidding(int number, string description, EStatus status)
         {
             Number = number;
             Description = description;
