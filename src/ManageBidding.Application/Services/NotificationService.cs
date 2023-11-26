@@ -17,7 +17,7 @@ namespace ManageBidding.Application.Services
             return _notifications.Any();
         }
 
-        public List<Notification> GetNotification()
+        public List<Notification> GetNotifications()
         {
             return _notifications;
         }
