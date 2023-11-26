@@ -30,3 +30,25 @@
 #bidding-data-table tbody td {
     color: #010F30;
 }
+
+@media(max-width: 414px) {
+    .dataTables_length, .dataTables_filter {
+        text-align: left !important;
+    }
+
+    #bidding-data-table thead th:nth-child(2) {
+        min-width: 120px;
+    }
+
+    #bidding-data-table thead th:nth-child(3) {
+        min-width: 80px;
+    }
+
+    #bidding-data-table thead th:last-child {
+        min-width: 110px;
+    }
+
+    #bidding-data-table_wrapper {
+        overflow: auto;
+    }
+}

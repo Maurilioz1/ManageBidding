@@ -72,3 +72,9 @@ dt {
         font-size: 16px;
     }
 }
+
+@media (max-width: 414px) {
+    .navbar-toggler {
+        background-color: #B3B3B3 !important;
+    }
+}
