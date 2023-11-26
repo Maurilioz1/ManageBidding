@@ -15,9 +15,9 @@
 <table class="table table-hover">
     <thead class="table-dark">
         <tr>
-            <th>@Html.Display("Número")</th>
-            <th>@Html.Display("Data de abertura")</th>
-            <th>@Html.Display("Status")</th>
+            <th>@Html.DisplayName("Número")</th>
+            <th>@Html.DisplayName("Data de abertura")</th>
+            <th>@Html.DisplayName("Status")</th>
             <th></th>
         </tr>
     </thead>
@@ -31,9 +31,11 @@
                 <td class="text-right">
                     <a class="btn btn-info" asp-action="Details" asp-route-id="@bidding.Id"><span class="fa fa-search"></span></a>
                     <a class="btn btn-warning" asp-action="Update" asp-route-id="@bidding.Id"><span class="fa fa-pencil-alt"></span></a>
-                    <a class="btn btn-warning" asp-action="Delete" asp-route-id="@bidding.Id"><span class="fa fa-trash"></span></a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@bidding.Id"><span class="fa fa-trash"></span></a>
                 </td>
             </tr>
         }
     </tbody>
+
+    <p lorem="50"></p>
 </table>

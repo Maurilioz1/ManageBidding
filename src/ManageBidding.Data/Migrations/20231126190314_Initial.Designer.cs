@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ManageBidding.Data.Migrations
 {
     [DbContext(typeof(ManageBiddingContext))]
-    [Migration("20231126152229_Initial")]
+    [Migration("20231126190314_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -24,6 +24,8 @@ namespace ManageBidding.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.HasSequence<int>("BiddingSequence");
 
             modelBuilder.Entity("ManageBidding.Domain.Models.Bidding", b =>
                 {
@@ -40,16 +42,14 @@ namespace ManageBidding.Data.Migrations
 
                     b.Property<int>("Number")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Number"));
+                        .HasColumnType("int")
+                        .HasDefaultValueSql("NEXT VALUE FOR BiddingSequence");
 
                     b.Property<DateTime>("RegistrationDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("char");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

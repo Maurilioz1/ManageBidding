@@ -20,6 +20,8 @@ namespace ManageBidding.Data.EntityFramework.Context
                 property.SetColumnType("varchar(100)");
             }
 
+            modelBuilder.HasSequence<int>("BiddingSequence").StartsAt(1).IncrementsBy(1);
+
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ManageBiddingContext).Assembly);
         }
 

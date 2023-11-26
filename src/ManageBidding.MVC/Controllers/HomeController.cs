@@ -34,8 +34,7 @@ namespace ManageBidding.MVC.Controllers
                 modelError.Title = "Ocorreu um erro!";
                 modelError.Message = "Ocorreu um erro! Tente novamente mais tarde ou contate nosso suporte.";
             }
-
-            if (id == 404)
+            else if (id == 404)
             {
                 modelError.ErrorCode = id;
                 modelError.Title = "Ops! Página não encontrada.";

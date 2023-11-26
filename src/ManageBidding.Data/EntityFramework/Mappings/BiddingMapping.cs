@@ -10,9 +10,8 @@ namespace ManageBidding.Data.EntityFramework.Mappings
         {
             builder.HasKey(b => b.Id);
 
-            builder.Property(b => b.Number).ValueGeneratedOnAdd();
+            builder.Property(b => b.Number).HasDefaultValueSql("NEXT VALUE FOR BiddingSequence");
             builder.Property(b => b.Description).HasColumnType("varchar(1000)").IsRequired();
-            builder.Property(b => b.Status).HasColumnType("char").IsRequired();
 
             builder.ToTable("Biddings");
         }

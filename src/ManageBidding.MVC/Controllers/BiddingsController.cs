@@ -1,8 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using AutoMapper;
+﻿using AutoMapper;
 using ManageBidding.Application.Interfaces.Services;
 using ManageBidding.Application.ViewModels;
-using ManageBidding.Domain.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ManageBidding.MVC.Controllers
 {

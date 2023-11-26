@@ -11,15 +11,17 @@ namespace ManageBidding.Data.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateSequence<int>(
+                name: "BiddingSequence");
+
             migrationBuilder.CreateTable(
                 name: "Biddings",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Number = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Number = table.Column<int>(type: "int", nullable: false, defaultValueSql: "NEXT VALUE FOR BiddingSequence"),
                     Description = table.Column<string>(type: "varchar(1000)", nullable: false),
-                    Status = table.Column<string>(type: "char", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false),
                     RegistrationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Active = table.Column<bool>(type: "bit", nullable: false)
                 },
@@ -34,6 +36,9 @@ namespace ManageBidding.Data.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Biddings");
+
+            migrationBuilder.DropSequence(
+                name: "BiddingSequence");
         }
     }
 }

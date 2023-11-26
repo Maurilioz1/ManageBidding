@@ -22,6 +22,8 @@ namespace ManageBidding.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.HasSequence<int>("BiddingSequence");
+
             modelBuilder.Entity("ManageBidding.Domain.Models.Bidding", b =>
                 {
                     b.Property<Guid>("Id")
@@ -37,16 +39,14 @@ namespace ManageBidding.Data.Migrations
 
                     b.Property<int>("Number")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Number"));
+                        .HasColumnType("int")
+                        .HasDefaultValueSql("NEXT VALUE FOR BiddingSequence");
 
                     b.Property<DateTime>("RegistrationDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("char");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
