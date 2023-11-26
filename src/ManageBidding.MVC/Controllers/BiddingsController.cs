@@ -115,7 +115,7 @@ namespace ManageBidding.MVC.Controllers
         }
 
         [Route("deletar")]
-        [HttpDelete, ActionName("Delete")]
+        [HttpPost, ActionName("Delete")]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
             var bidding = await GetBidding(id);

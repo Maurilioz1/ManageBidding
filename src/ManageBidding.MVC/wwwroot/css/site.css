@@ -28,6 +28,10 @@ textarea {
     right: 10px;
 }
 
+.button {
+    width: 150px;
+}
+
 @media (min-width: 768px) {
     html {
         font-size: 16px;

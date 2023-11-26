@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<ManageBidding.Application.ViewModels.BiddingViewModel>
+@using ManageBidding.MVC.Extensions
 
 @{
     ViewData["Title"] = "Lista de licitações";
@@ -12,7 +13,7 @@
 
 <a class="btn btn-info" asp-action="Create">Nova licitação</a>
 
-<table class="table table-hover">
+<table class="table table-hover table-biddings">
     <thead class="table-dark">
         <tr>
             <th>@Html.DisplayName("Número")</th>
@@ -25,10 +26,10 @@
         @foreach (var bidding in Model)
         {
             <tr>
-                <td>@Html.DisplayFor(model => bidding.Number)</td>
+                <td>@this.FormarBiddingNumber(bidding.Number)</td>
                 <td>@Html.DisplayFor(model => bidding.RegistrationDate)</td>
                 <td>@Html.DisplayFor(model => bidding.Status)</td>
-                <td class="text-right">
+                <td class="td-actions">
                     <a class="btn btn-info" asp-action="Details" asp-route-id="@bidding.Id"><span class="fa fa-search"></span></a>
                     <a class="btn btn-warning" asp-action="Update" asp-route-id="@bidding.Id"><span class="fa fa-pencil-alt"></span></a>
                     <a class="btn btn-danger" asp-action="Delete" asp-route-id="@bidding.Id"><span class="fa fa-trash"></span></a>
