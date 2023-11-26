@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using ManageBidding.MVC.Models;
+using ManageBidding.MVC.ViewModels;
 using ManageBidding.Application.Interfaces.Services;
 
 namespace ManageBidding.MVC.Controllers

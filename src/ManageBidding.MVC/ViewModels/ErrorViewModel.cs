@@ -1,4 +1,4 @@
-namespace ManageBidding.MVC.Models
+namespace ManageBidding.MVC.ViewModels
 {
     public class ErrorViewModel
     {
