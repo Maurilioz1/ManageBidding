@@ -74,7 +74,7 @@ namespace ManageBidding.MVC.Controllers
         }
 
         [Route("editar")]
-        [HttpPut]
+        [HttpPost]
         public async Task<IActionResult> Update(BiddingViewModel biddingViewModel, Guid id)
         {
             if (id != biddingViewModel.Id)
@@ -85,6 +85,7 @@ namespace ManageBidding.MVC.Controllers
             var bidding = await GetBidding(id);
 
             biddingViewModel.Number = bidding.Number;
+            biddingViewModel.Active = bidding.Active;
 
             if (!ModelState.IsValid)
             {

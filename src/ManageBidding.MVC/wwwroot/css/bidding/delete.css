@@ -1,3 +1,7 @@
 ﻿.form-bidding-delete {
     flex-direction: row;
 }
+
+.description-value {
+    text-align: justify;
+}

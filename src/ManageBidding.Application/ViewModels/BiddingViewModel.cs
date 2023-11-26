@@ -11,5 +11,6 @@ namespace ManageBidding.Application.ViewModels
         public string? Description { get; set; }
         public EStatus Status { get; set; }
         public DateTime RegistrationDate { get; set; }
+        public bool Active { get; set; }
     }
 }
