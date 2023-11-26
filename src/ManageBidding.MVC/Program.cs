@@ -1,27 +1,49 @@
+using ManageBidding.IoC;
+using Microsoft.EntityFrameworkCore;
+using ManageBidding.Data.EntityFramework.Context;
+using ManageBidding.MVC.Configuration;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+builder.Services.AddDbContext<ManageBiddingContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddMvcConfiguration();
+DependencyInjection.RegisterServices(builder.Services);
 
 var app = builder.Build();
 
+IWebHostEnvironment env = app.Environment;
+IConfiguration config = app.Configuration;
+
+var builderConfig = new ConfigurationBuilder()
+    .SetBasePath(env.ContentRootPath)
+    .AddJsonFile("appsettings.json", true, true)
+    .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true, true)
+    .AddEnvironmentVariables();
+
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    builderConfig.AddUserSecrets<Program>();
+    app.UseDeveloperExceptionPage();
+}
+else
+{
+    app.UseExceptionHandler("/erro/500");
+    app.UseStatusCodePagesWithRedirects("/erro/{0}");
     app.UseHsts();
 }
 
+config = builderConfig.Build();
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
 app.UseAuthorization();
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapRazorPages();
 
 app.Run();
