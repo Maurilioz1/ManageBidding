@@ -132,7 +132,7 @@ namespace ManageBidding.MVC.Controllers
                 return View(bidding);
             }
 
-            TempData["Succes"] = "Licitação deletada com sucesso!";
+            TempData["Success"] = "Licitação deletada com sucesso!";
 
             return RedirectToAction("Index");
         }
