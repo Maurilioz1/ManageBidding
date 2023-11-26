@@ -1,1 +1,5 @@
-﻿
+﻿.form-create-bidding {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

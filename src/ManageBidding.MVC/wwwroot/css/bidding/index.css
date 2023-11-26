@@ -1,4 +1,4 @@
-﻿.btn-new-bidding {
+﻿.new-bidding-btn {
     margin-bottom: 20px;
 }
 
@@ -8,4 +8,25 @@
 
 .table-biddings .td-actions {
     text-align: right;
+}
+
+#bidding-data-table thead {
+    --bs-table-bg: #010F30;
+}
+
+    #bidding-data-table thead th {
+        color: #B3B3B3;
+    }
+
+#bidding-data-table tbody td .fa {
+    color: #FFFFFF;
+}
+
+#bidding-data-table tbody td .btn-update, #bidding-data-table tbody td .btn-details {
+    background-color: #010F30;
+    border-color: #010F30;
+}
+
+#bidding-data-table tbody td {
+    color: #010F30;
 }

@@ -5,18 +5,28 @@ html {
 }
 
 body {
-    margin-bottom: 60px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    background-color: #F5F5F5;
 }
 
 textarea {
     resize: none;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #010F30;
+}
+
+    footer div {
+        color: #B3B3B3 !important;
+    }
+
+        footer div a {
+            color: #FFFFFF;
+        }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
@@ -29,7 +39,32 @@ textarea {
 }
 
 .button {
+    background-color: #030F4C;
+    border-color: #030F4C;
+    color: #FFFFFF;
     width: 150px;
+}
+
+    .button:hover {
+        background-color: #0208DA;
+        border-color: #0208DA;
+        color: #FFFFFF;
+    }
+
+.navbar {
+    background-color: #010F30;
+}
+
+.logo-navbar, .nav-item a {
+    color: #B3B3B3 !important;
+}
+
+.title-page, .form-group label {
+    color: #010F30;
+}
+
+dt {
+    color: #0208DA;
 }
 
 @media (min-width: 768px) {

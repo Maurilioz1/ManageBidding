@@ -7,10 +7,10 @@
 
 <link rel="stylesheet" href="~/css/bidding/create.css" asp-append-version="true" />
 
-<h1>@ViewData["Title"]</h1>
+<h1 class="title-page">@ViewData["Title"]</h1>
 <hr />
 
-<form asp-action="Create">
+<form asp-action="Create" class="form-create-bidding">
     <vc:Summary></vc:Summary>
 
     <div class="form-group">
@@ -26,8 +26,8 @@
     </div>
 
     <div class="form-group">
-        <input type="submit" value="Registrar" class="btn btn-primary" />
-        <a class="btn btn-info" asp-action="Index">Voltar</a>
+        <input type="submit" value="Registrar" class="btn button" />
+        <a class="btn button" asp-action="Index">Voltar</a>
     </div>
 </form>
 

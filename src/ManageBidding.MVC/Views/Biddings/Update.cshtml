@@ -7,10 +7,10 @@
 
 <link rel="stylesheet" href="~/css/bidding/update.css" asp-append-version="true" />
 
-<h1>@ViewData["Title"]</h1>
+<h1 class="title-page">@ViewData["Title"]</h1>
 <hr />
 
-<form asp-action="Update">
+<form asp-action="Update" class="form-update-bidding">
     <vc:Summary></vc:Summary>
 
     <input type="hidden" asp-for="Id" />
@@ -28,8 +28,8 @@
     </div>
 
     <div class="form-group">
-        <input type="submit" value="Atualizar" class="btn btn-primary" />
-        <a class="btn btn-info" href="javascript:window.history.back()">Voltar</a>
+        <input type="submit" value="Atualizar" class="btn button" />
+        <a class="btn button" href="javascript:window.history.back()">Voltar</a>
     </div>
 </form>
 

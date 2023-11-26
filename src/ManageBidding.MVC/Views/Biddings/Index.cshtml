@@ -7,12 +7,12 @@
 
 <link rel="stylesheet" href="~/css/bidding/index.css" asp-append-version="true" />
 
-<h1>@ViewData["Title"]</h1>
+<h1 class="title-page">@ViewData["Title"]</h1>
 <hr />
 
 <vc:Summary></vc:Summary>
 
-<a class="btn btn-info btn-new-bidding" asp-action="Create">Nova licitação</a>
+<a class="btn button new-bidding-btn" asp-action="Create">Nova licitação</a>
 
 <table id="bidding-data-table" class="table table-hover table-biddings">
     <thead class="table-dark">
@@ -31,8 +31,8 @@
                 <td>@Html.DisplayFor(model => bidding.RegistrationDate)</td>
                 <td>@Html.DisplayFor(model => bidding.Status)</td>
                 <td class="td-actions">
-                    <a class="btn btn-info" asp-action="Details" asp-route-id="@bidding.Id"><span class="fa fa-search"></span></a>
-                    <a class="btn btn-warning" asp-action="Update" asp-route-id="@bidding.Id"><span class="fa fa-pencil-alt"></span></a>
+                    <a class="btn btn-info btn-details" asp-action="Details" asp-route-id="@bidding.Id"><span class="fa fa-search"></span></a>
+                    <a class="btn btn-warning btn-update" asp-action="Update" asp-route-id="@bidding.Id"><span class="fa fa-pencil-alt"></span></a>
                     <a class="btn btn-danger" asp-action="Delete" asp-route-id="@bidding.Id"><span class="fa fa-trash"></span></a>
                 </td>
             </tr>

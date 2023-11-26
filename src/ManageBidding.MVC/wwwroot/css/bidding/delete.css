@@ -5,3 +5,14 @@
 .description-value {
     text-align: justify;
 }
+
+.button-delete {
+    background-color: #dc3545;
+    color: #FFFFFF;
+    width: 150px;
+}
+
+    .button-delete:hover {
+        background-color: #bb2d3b;
+        color: #FFFFFF;
+    }

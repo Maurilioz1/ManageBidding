@@ -7,7 +7,7 @@
 
 <link rel="stylesheet" href="~/css/bidding/details.css" asp-append-version="true" />
 
-<h1>@ViewData["Title"]</h1>
+<h1 class="title-page">@ViewData["Title"]</h1>
 <hr />
 
 <dl class="row">
@@ -38,5 +38,5 @@
 </dl>
 
 
-<a class="btn btn-warning button" asp-action="Update" asp-route-id="@Model.Id">Atualizar</a>
-<a class="btn btn-info button" href="javascript:window.history.back()">Voltar</a>
+<a class="btn button" asp-action="Update" asp-route-id="@Model.Id">Atualizar</a>
+<a class="btn button" href="javascript:window.history.back()">Voltar</a>
