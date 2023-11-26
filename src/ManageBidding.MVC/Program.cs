@@ -1,7 +1,7 @@
-using ManageBidding.IoC;
 using Microsoft.EntityFrameworkCore;
-using ManageBidding.Data.EntityFramework.Context;
+using ManageBidding.IoC;
 using ManageBidding.MVC.Configuration;
+using ManageBidding.Data.EntityFramework.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
