@@ -16,7 +16,9 @@
                     "previous": "<"
                 },
                 "info": "Exibindo _END_ de _TOTAL_ registros",
-                "lengthMenu": "Exibir _MENU_ registros"
+                "infoEmpty": "Não há gegistros",
+                "lengthMenu": "Exibir _MENU_ registros",
+                "emptyTable": "Sem dados disponíveis na tabela"
             }
         });
     }

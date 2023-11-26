@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ManageBidding.Data.Migrations
 {
     [DbContext(typeof(ManageBiddingContext))]
-    [Migration("20231126190314_Initial")]
+    [Migration("20231126204207_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
