@@ -12,9 +12,9 @@
 
 <vc:Summary></vc:Summary>
 
-<a class="btn btn-info" asp-action="Create">Nova licitação</a>
+<a class="btn btn-info btn-new-bidding" asp-action="Create">Nova licitação</a>
 
-<table class="table table-hover table-biddings">
+<table id="bidding-data-table" class="table table-hover table-biddings">
     <thead class="table-dark">
         <tr>
             <th>@Html.DisplayName("Número")</th>
@@ -38,6 +38,4 @@
             </tr>
         }
     </tbody>
-
-    <p lorem="50"></p>
 </table>

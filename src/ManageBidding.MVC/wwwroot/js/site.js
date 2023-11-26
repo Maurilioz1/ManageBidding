@@ -1,4 +1,31 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿var main = (function () {
+    function init() {
+        bind();
+    }
 
-// Write your JavaScript code.
+    function bind() {
+        bindDatatable();
+    }
+
+    function bindDatatable() {
+        $('#bidding-data-table').DataTable({
+            "language": {
+                "search": "Pesquisar: ",
+                "paginate": {
+                    "next": ">",
+                    "previous": "<"
+                },
+                "info": "Exibindo _END_ de _TOTAL_ registros",
+                "lengthMenu": "Exibir _MENU_ registros"
+            }
+        });
+    }
+
+    return {
+        Init: init
+    }
+}());
+
+$(function () {
+    main.Init();
+});
