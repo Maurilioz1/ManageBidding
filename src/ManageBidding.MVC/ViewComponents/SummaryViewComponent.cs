@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ManageBidding.Application.Interfaces.Services;
 
-namespace ManageBidding.MVC.Components
+namespace ManageBidding.MVC.ViewComponents
 {
     public class SummaryViewComponent : ViewComponent
     {
