@@ -31,6 +31,10 @@
     color: #010F30;
 }
 
+#bidding-data-table_wrapper {
+    margin-bottom: 100px;
+}
+
 @media(max-width: 414px) {
     .dataTables_length, .dataTables_filter {
         text-align: left !important;
